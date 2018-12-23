@@ -4,6 +4,9 @@ require 'bundler/setup'
 require 'correios_br'
 require 'byebug'
 require 'vcr'
+require 'coveralls'
+
+Coveralls.wear!
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
