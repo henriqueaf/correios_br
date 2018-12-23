@@ -1,4 +1,6 @@
 # CorreiosBr
+[![Coverage Status](https://coveralls.io/repos/github/henriqueaf/correios_br/badge.svg)](https://coveralls.io/github/henriqueaf/correios_br)
+[![Build Status](https://travis-ci.com/henriqueaf/correios_br.svg?branch=master)](https://travis-ci.com/henriqueaf/correios_br)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/correios_br`. To experiment with that code, run `bin/console` for an interactive prompt.
 
