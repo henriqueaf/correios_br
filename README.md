@@ -46,6 +46,13 @@ To use the gem in `irb` or other projet, just `require` the gem like:
 
 ```ruby
 2.5.1 :001 > require 'correios_br'
+ => true
+
+2.5.1 :002 > CorreiosBr::CEP::get_address('01023902')
+ => {:zipcode=>"01023-902", :address=>"Rua Barão de Duprat", :complement=>"449", :neighborhood=>"Centro", :city=>"São Paulo", :state=>"SP", :unity=>"", :ibge=>"3550308", :gia=>"1004"}
+
+2.5.1 :003 > CorreiosBr::CEP::get_address(88010200)
+ => {:zipcode=>"88010-200", :address=>"Rua Francisco Tolentino", :complement=>"", :neighborhood=>"Centro", :city=>"Florianópolis", :state=>"SC", :unity=>"", :ibge=>"4205407", :gia=>""}
 ```
 
 ## Contributing
