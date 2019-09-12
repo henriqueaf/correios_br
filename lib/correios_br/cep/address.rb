@@ -12,6 +12,7 @@ module CorreiosBr
 
         response = web_service.get_address_by_zipcode(zipcode: zipcode)
         return nil if response.code != '200'
+
         parser.parse_address(json_string: response.body)
       end
 
