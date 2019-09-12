@@ -3,18 +3,19 @@ name: Ruby
 on: [push, pull_request]
 
 jobs:
-  build:
+  build_and_test:
+    name: Build and test
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby 2.5
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.5.x
     - name: Build and test with Rake
       run: |
-        gem install bundler
+        gem install bundler:1.16.2
         bundle install --jobs 4 --retry 3
-        bundle exec rspec
+        bundle exec rake

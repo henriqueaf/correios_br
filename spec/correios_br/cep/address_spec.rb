@@ -13,7 +13,7 @@ RSpec.describe CorreiosBr::CEP::Address do
         result = described_class.search_address_by_zipcode(zipcode: ViacepHelper::VALID_ZIPCODE)
 
         expect(result).to eq(
-          CorreiosBr::CEP::Parser.parse_address(json_string: get_valid_json_response)
+          CorreiosBr::CEP::Parser.parse_address(json_string: valid_json_response)
         )
       end
     end
