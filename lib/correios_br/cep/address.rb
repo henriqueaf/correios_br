@@ -25,11 +25,12 @@ module CorreiosBr
       end
 
       def self.validate_zipcode(zipcode)
-        raise ArgumentError.new('zipcode is required') if zipcode.empty?
+        raise ArgumentError, 'zipcode is required' if zipcode.empty?
 
-        raise ArgumentError.new(
-          'zipcode in invalid format (valid format: 00000000 or 00000-000)'
-        ) unless zipcode.match(/^[0-9]{8}$/) || zipcode.match(/^[0-9]{5}-[0-9]{3}$/)
+        raise ArgumentError,
+              'zipcode in invalid format (valid format: 00000000 or \
+              00000-000)' unless zipcode.match(/^[0-9]{8}$/) ||
+                                 zipcode.match(/^[0-9]{5}-[0-9]{3}$/)
       end
 
       private_class_method :web_service, :parser, :validate_zipcode
